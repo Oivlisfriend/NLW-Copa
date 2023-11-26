@@ -1,14 +1,14 @@
 
 import Image from 'next/image';
-import appPreviewImg from './assets/app-nlw-copa-preview.png'
-import logo from './assets/logo.svg'
-import userAvatarExample from './assets/users-avatar-example.png'
-import iconCheckImg from './assets/icon-check.svg'
+import appPreviewImg from '../src/assets/app-nlw-copa-preview.png'
+import logo from '../src/assets/logo.svg'
+import userAvatarExample from '../src/assets/users-avatar-example.png'
+import iconCheckImg from '../src/assets/icon-check.svg'
 import { FormEvent, useState } from 'react';
 
 
 interface HomeProps {
-    poolCount: number;
+       poolCount: number;
     guessCount: number;
     userCount: number;
 }
