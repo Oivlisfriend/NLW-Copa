@@ -16,7 +16,7 @@ interface HomeProps {
 
 export default function Home(props: HomeProps) {
     const [poolTitle, setPoolTitle] = useState('');
-    const CreatePool = async (event: FormEvent) => {
+   /* const CreatePool = async (event: FormEvent) => {
         event.preventDefault();
         try {
             const response = await api.post('/pools', {
@@ -33,7 +33,7 @@ export default function Home(props: HomeProps) {
             console.log(error)
             alert("Falha ao criar o bolão, tente novamente")
         }
-    }
+    }*/
     return (
         <div className='max-w-[1124px] gap-28 h-screen mx-auto grid grid-cols-2 items-center'>
             <main>
@@ -42,17 +42,17 @@ export default function Home(props: HomeProps) {
                 <div className='mt-10 flex items-center gap-2'>
                     <Image src={userAvatarExample} alt="" />
                     <strong className="text-gray-100 text-xl">
-                        <span className="text-ignite-500"> +{props.userCount}</span> pessoas já estão usando
+                        <span className="text-ignite-500"> +1 024{/*props.userCount*/}</span> pessoas já estão usando
                     </strong>
                 </div>
-                <form onSubmit={CreatePool} className='mt-10 flex gap-2'>
+                <form  className='mt-10 flex gap-2'>
                     <input
                         className="flex-1 text-gray-100 px-6 py-4 rounded bg-gray-800 border-gray-600 text-sm"
                         type="text"
                         name=""
                         id=""
                         value={poolTitle}
-                        onChange={event => setPoolTitle(event.target.value)}
+                        
                         required
                         placeholder='Qual é o nome do seu bolão?'
                     />
@@ -68,7 +68,7 @@ export default function Home(props: HomeProps) {
                     <div className='flex items-center gap-6'>
                         <Image src={iconCheckImg} alt='' />
                         <div className='flex flex-col'>
-                            <span className='font-bold text-2xl'>+{props.poolCount}</span>
+                            <span className='font-bold text-2xl'>+1 453{/*props.poolCount*/}</span>
                             <span>Bolões criados</span>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ export default function Home(props: HomeProps) {
                     <div className='flex items-center gap-6'>
                         <Image src={iconCheckImg} alt='' />
                         <div className='flex flex-col'>
-                            <span className='font-bold text-2xl'>+{props.guessCount}</span>
+                            <span className='font-bold text-2xl'>+1 234{/*props.guessCount*/}</span>
                             <span>Palpites enviados</span>
                         </div>
                     </div>
@@ -91,7 +91,7 @@ export default function Home(props: HomeProps) {
     )
 }
 
-export const getServerSideProps = async () => {
+/*export const getServerSideProps = async () => {
     const [
         poolCountResponse,
         guessCountResponse,
@@ -108,4 +108,4 @@ export const getServerSideProps = async () => {
             userCount: userCountResponse.data.count
         }
     }
-}
+}*/
