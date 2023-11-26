@@ -1,0 +1,20 @@
+
+# @name create-user
+GET http://localhost:3333/user
+###
+# @name create-user
+GET http://localhost:3333/pools/count
+###
+# @name create-user
+GET http://localhost:3333/users/count
+###
+GET http://localhost:3333/guesses/count
+
+###
+# @name create-user
+POST http://localhost:3333/pools
+Content-Type: application/json
+
+{
+     "title":"novo teste"
+}
