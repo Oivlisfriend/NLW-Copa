@@ -14,9 +14,9 @@ interface HomeProps {
     userCount: number;
 }
 
-export default function Home(props: HomeProps) {
+export default function Home() {
     const [poolTitle, setPoolTitle] = useState('');
-   /* const CreatePool = async (event: FormEvent) => {
+  /*  const CreatePool = async (event: FormEvent) => {
         event.preventDefault();
         try {
             const response = await api.post('/pools', {
@@ -42,7 +42,7 @@ export default function Home(props: HomeProps) {
                 <div className='mt-10 flex items-center gap-2'>
                     <Image src={userAvatarExample} alt="" />
                     <strong className="text-gray-100 text-xl">
-                        <span className="text-ignite-500"> +1 024{/*props.userCount*/}</span> pessoas já estão usando
+                        <span className="text-ignite-500"> +1 452{/*props.userCount*/}</span> pessoas já estão usando
                     </strong>
                 </div>
                 <form  className='mt-10 flex gap-2'>
@@ -52,7 +52,7 @@ export default function Home(props: HomeProps) {
                         name=""
                         id=""
                         value={poolTitle}
-                        
+                        onChange={event => setPoolTitle(event.target.value)}
                         required
                         placeholder='Qual é o nome do seu bolão?'
                     />
@@ -68,7 +68,7 @@ export default function Home(props: HomeProps) {
                     <div className='flex items-center gap-6'>
                         <Image src={iconCheckImg} alt='' />
                         <div className='flex flex-col'>
-                            <span className='font-bold text-2xl'>+1 453{/*props.poolCount*/}</span>
+                            <span className='font-bold text-2xl'>+2 267{/*props.poolCount*/}</span>
                             <span>Bolões criados</span>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ export default function Home(props: HomeProps) {
                     <div className='flex items-center gap-6'>
                         <Image src={iconCheckImg} alt='' />
                         <div className='flex flex-col'>
-                            <span className='font-bold text-2xl'>+1 234{/*props.guessCount*/}</span>
+                            <span className='font-bold text-2xl'>+1 345{/*props.guessCount*/}</span>
                             <span>Palpites enviados</span>
                         </div>
                     </div>
